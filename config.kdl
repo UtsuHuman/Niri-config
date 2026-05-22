@@ -51,10 +51,12 @@ layout {
         proportion 0.5
         proportion 0.66667
         proportion 1.0
-
       
     }
-
+     
+    tab-indicator {
+        hide-when-single-tab
+    }
        default-column-width { proportion 0.5; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
@@ -189,9 +191,8 @@ window-rule {
     open-focused false
 }
 
-window-rule {
-    match{}
-      opacity 0.95
+window-rule { 
+      opacity 0.95 
 }
 
 binds {
@@ -440,7 +441,7 @@ binds {
     // Mod+Shift+Space { switch-layout "prev"; }
     Mod+Shift+W { spawn "waypaper";}
     Mod+S   { screenshot; }
-    Ctrl+S { screenshot-screen; }
+    
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here
